@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demilly Alves de Oliveira - Currículo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            font-size: 12px;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            min-height: 297mm;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e40af;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .summary {
+            text-align: justify;
+            font-size: 12px;
+            line-height: 1.7;
+            color: #374151;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .skill-category h4 {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+        
+        .skill-list {
+            font-size: 11px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        
+        .project {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f8fafc;
+            border-left: 3px solid #2563eb;
+        }
+        
+        .project-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 4px;
+        }
+        
+        .project-tech {
+            font-size: 10px;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+        
+        .project-desc {
+            font-size: 11px;
+            color: #374151;
+            line-height: 1.5;
+        }
+        
+        .education-item, .study-item {
+            margin-bottom: 12px;
+        }
+        
+        .education-degree, .study-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .education-school, .study-desc {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .highlight-box {
+            background: #eff6ff;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #dbeafe;
+        }
+        
+        .highlight-list {
+            font-size: 11px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: #6b7280;
+            font-size: 11px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+        
+        @media print {
+            .download-btn {
+                display: none;
+            }
+            
+            body {
+                font-size: 11px;
+            }
+            
+            .container {
+                margin: 0;
+                padding: 15px;
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @page {
+            margin: 1cm;
+            size: A4;
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" onclick="downloadPDF()">📄 Download PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="name">DEMILLY ALVES DE OLIVEIRA</h1>
+            <p class="title">Desenvolvedor Front-end</p>
+            <div class="contact">
+                <div class="contact-item">📧 demillyoliveiraf@gmail.com</div>
+                <div class="contact-item">📱 (83) 98198-7648</div>
+                <div class="contact-item">📍 Santa Rita, PB</div>
+                <div class="contact-item">💻 github.com/eaezis</div>
+                <div class="contact-item">🔗 eaezis.github.io</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Resumo Profissional</h2>
+            <p class="summary">
+                Estudante de Análise e Desenvolvimento de Sistemas com foco em desenvolvimento front-end. Autodidata dedicado, com 3-4 horas diárias de estudo e projetos práticos hospedados no GitHub. Busco minha primeira oportunidade profissional para aplicar conhecimentos em HTML5, CSS3 e JavaScript, com objetivo de evoluir para desenvolvedor full-stack.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Linguagens e Tecnologias</h4>
+                    <div class="skill-list">
+                        • HTML5 (Semântica, Acessibilidade, SEO básico)<br>
+                        • CSS3 (Flexbox, Grid, Responsivo, Animações)<br>
+                        • JavaScript (ES6+, DOM, Eventos - em desenvolvimento)<br>
+                        • Git & GitHub (Controle de versão, GitHub Desktop)
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Ferramentas e Design</h4>
+                    <div class="skill-list">
+                        • Figma (Prototipação e estruturação de layouts)<br>
+                        • VS Code (Ambiente de desenvolvimento)<br>
+                        • GitHub Pages (Deploy de projetos)<br>
+                        • Responsive Design (Mobile-first)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Projetos em Portfólio</h2>
+            
+            <div class="project">
+                <div class="project-title">🤖 Projeto Android | eaezis.github.io/projeto-android/</div>
+                <div class="project-tech">Tecnologias: HTML5, CSS3, Design Responsivo</div>
+                <div class="project-desc">
+                    Site informativo sobre a história do Android. Layout totalmente responsivo com técnicas avançadas de CSS. Implementação de hover effects e transições suaves.
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">📜 Projeto Cordel | eaezis.github.io/projeto-cordel/</div>
+                <div class="project-tech">Tecnologias: HTML5, CSS3, Efeitos Parallax</div>
+                <div class="project-desc">
+                    Página poética com efeito parallax e tipografia estilizada. Técnicas avançadas de CSS para efeitos visuais. Design responsivo e otimizado para diferentes dispositivos.
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">📝 Formulário com Grid Layout | github.com/eaezis/form-grid</div>
+                <div class="project-tech">Tecnologias: HTML5, CSS3, Flexbox, Grid</div>
+                <div class="project-desc">
+                    Página de cadastro com layout moderno usando CSS Grid. Interface limpa e organizada com foco em UX/UI. Design responsivo e estrutura semântica.
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="section">
+                    <h2 class="section-title">Formação Acadêmica</h2>
+                    <div class="education-item">
+                        <div class="education-degree">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+                        <div class="education-school">Uniasselvi EAD | 2025 - 2027 (1º Semestre)</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Idiomas</h2>
+                    <div class="skill-list">
+                        • Português: Nativo<br>
+                        • Inglês: Intermediário (Leitura técnica, documentação, tutoriais)
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section">
+                    <h2 class="section-title">Aprendizado Contínuo</h2>
+                    <div class="study-item">
+                        <div class="study-title">Estudos Atuais (3-4 horas diárias)</div>
+                        <div class="study-desc">
+                            • Curso de HTML5 e CSS3 - Gustavo Guanabara<br>
+                            • JavaScript Moderno - Em andamento<br>
+                            • Desenvolvimento Web - Dev Samurai<br>
+                            • Disciplinas ADS - Uniasselvi
+                        </div>
+                    </div>
+                    <div class="study-item">
+                        <div class="study-title">Próximos Passos</div>
+                        <div class="study-desc">React.js, Node.js, Banco de Dados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Diferenciais</h2>
+            <div class="highlight-box">
+                <div class="highlight-list">
+                    • <strong>Autodidatismo:</strong> Disciplina de estudos diários consistentes<br>
+                    • <strong>Projetos Reais:</strong> Portfolio com códigos funcionais e hospedados<br>
+                    • <strong>Versionamento:</strong> Experiência prática com Git e GitHub<br>
+                    • <strong>Design:</strong> Conhecimento em Figma para prototipação<br>
+                    • <strong>Responsividade:</strong> Foco em desenvolvimento mobile-first<br>
+                    • <strong>Aprendizado Ágil:</strong> Capacidade de absorver novas tecnologias rapidamente
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="section">
+                <h2 class="section-title">Disponibilidade</h2>
+                <div class="skill-list">
+                    • Modalidade: Remoto (preferencial) ou Presencial<br>
+                    • Período: Integral ou meio período<br>
+                    • Início: Imediato<br>
+                    • Meta: Desenvolvedor Full-stack
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Informações Adicionais</h2>
+                <div class="skill-list">
+                    • Facilidade para trabalho em equipe<br>
+                    • Comprometimento com prazos<br>
+                    • Interesse em projetos open source<br>
+                    • Foco em melhores práticas
+                </div>
+            </div>
+        </div>
+
+        <div class="quote">
+            "Transformando aprendizado em código, linha por linha, rumo ao desenvolvimento full-stack."
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            // Esconde o botão temporariamente
+            const btn = document.querySelector('.download-btn');
+            btn.style.display = 'none';
+            
+            // Usa a função print do navegador
+            window.print();
+            
+            // Mostra o botão novamente após um delay
+            setTimeout(() => {
+                btn.style.display = 'block';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
